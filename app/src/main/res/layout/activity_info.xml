@@ -6,24 +6,25 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".InfoActivity">
 
     <TextView
-        android:text="Welcome to Tic Tac Toe"
+        android:text="How to play"
         android:textSize="30sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <Button
-        android:id="@+id/infoButton"
+    <TextView
+        android:text="The game is played on a grid that's 3 squares by 3 squares. You are X, your friend (or the computer) is O. Players take turns putting their marks in empty squares. The first player to get 3 of there marks in a row (up, down, across, or diagonally) is the winner. When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie."
+        android:textSize="30sp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="How to Play" />
+        android:layout_height="wrap_content"/>
+
 
     <Button
-        android:id="@+id/gameButton"
+        android:id="@+id/homeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start Game" />
+        android:text="Back" />
 
 </LinearLayout>
