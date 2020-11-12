@@ -46,6 +46,7 @@ public class GameActivity extends AppCompatActivity {
                         xOrO=!xOrO;
                         gameButtons[finalI][finalJ].setText(!xOrO+"");
                         gameButtons[finalI][finalJ].setEnabled(false);
+                        gameWon(); //check for game won
                     }
                 });
             }
