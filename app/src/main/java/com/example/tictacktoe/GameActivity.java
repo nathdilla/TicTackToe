@@ -46,6 +46,7 @@ public class GameActivity extends AppCompatActivity {
                         xOrO=!xOrO;
                         gameButtons[finalI][finalJ].setText(!xOrO+"");
                         gameButtons[finalI][finalJ].setEnabled(false);
+                        gameWon(); //check for game won
                     }
                 });
             }
@@ -74,5 +75,30 @@ public class GameActivity extends AppCompatActivity {
         }
         //detect is game is won by calling Nathans method here
         return returnState&&!gameWon;
+    }
+    private boolean gameWon(){
+        boolean returnState = false;
+        for(int x = 0; x < 3; x++)//check for vertical wins
+        {
+            if (buttonStates[x][0] == buttonStates[x][1] && buttonStates[x][1] == buttonStates[x][2] && buttonStates[x][0] != 0) {
+                returnState = true;
+            }
+        }
+        for(int y = 0; y < 3; y++)//check for horizontal wins
+        {
+            if (buttonStates[0][y] == buttonStates[1][y] && buttonStates[1][y] == buttonStates[2][y] && buttonStates[0][y] != 0) {
+                returnState = true;
+            }
+        }
+        //check for diagonal wins
+        if(buttonStates[0][0] == buttonStates[1][1] && buttonStates[1][1] == buttonStates[2][2] && buttonStates[0][0] != 0)
+        {
+            returnState = true;
+        }
+        else if(buttonStates[0][2] == buttonStates[1][1] && buttonStates[1][1] == buttonStates[2][0] && buttonStates[0][2] != 0)
+        {
+            returnState = true;
+        }
+        return returnState;
     }
 }
