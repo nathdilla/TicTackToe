@@ -50,6 +50,7 @@ public class GameActivity extends AppCompatActivity {
                         xOrO=!xOrO;
                         if(gameWon()){
                            if(xOrO){
+                               //
                                score[0]++;
                                TextView tv1 = findViewById(R.id.p1Text);
                                tv1.setText("Player 1: "+score[0]);
