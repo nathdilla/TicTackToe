@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".GameActivity">
 
     <RelativeLayout
@@ -59,21 +60,24 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textSize="60sp"/>
+            android:textSize="60sp"
+            android:background="@color/background"/>
 
         <Button
             android:id="@+id/button01"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textSize="60sp"/>
+            android:textSize="60sp"
+            android:background="@color/eagleRed"/>
 
         <Button
             android:id="@+id/button02"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textSize="60sp"/>
+            android:textSize="60sp"
+            android:background="@color/background"/>
 
     </LinearLayout>
 
@@ -87,21 +91,24 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textSize="60sp"/>
+            android:textSize="60sp"
+            android:background="@color/eagleRed"/>
 
         <Button
             android:id="@+id/button11"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textSize="60sp"/>
+            android:textSize="60sp"
+            android:background="@color/background"/>
 
         <Button
             android:id="@+id/button12"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textSize="60sp"/>
+            android:textSize="60sp"
+            android:background="@color/eagleRed"/>
 
     </LinearLayout>
 
@@ -115,21 +122,24 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textSize="60sp"/>
+            android:textSize="60sp"
+            android:background="@color/background"/>
 
         <Button
             android:id="@+id/button21"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textSize="60sp"/>
+            android:textSize="60sp"
+            android:background="@color/eagleRed"/>
 
         <Button
             android:id="@+id/button22"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textSize="60sp"/>
+            android:textSize="60sp"
+            android:background="@color/background"/>
 
     </LinearLayout>
 

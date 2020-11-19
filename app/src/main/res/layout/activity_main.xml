@@ -6,13 +6,15 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="@color/background"
     tools:context=".MainActivity">
 
     <TextView
-        android:text="Welcome to Tic Tac Toe"
+        android:text="Welcome to VVHS Tic Tac Toe"
         android:textSize="30sp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:textColor="@color/eagleRed"/>
 
     <Button
         android:id="@+id/infoButton"
