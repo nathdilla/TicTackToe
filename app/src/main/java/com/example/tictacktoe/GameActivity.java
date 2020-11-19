@@ -46,9 +46,11 @@ public class GameActivity extends AppCompatActivity {
                         xOrO=!xOrO;
                         gameButtons[finalI][finalJ].setText(!xOrO+"");
                         gameButtons[finalI][finalJ].setEnabled(false);
-                        gameWon(); //check for game won
+                        gameWon();
+                        isCatsGame();
                     }
                 });
+
             }
         }
         doneButton = (Button) findViewById(R.id.doneButton);
@@ -65,7 +67,6 @@ public class GameActivity extends AppCompatActivity {
     }
     private boolean isCatsGame(){
         boolean returnState = true;
-        boolean gameWon = false;
         for (int i = 0; i<3;i++){
             for(int j = 0; j<3;j++){
                 if(buttonStates[i][j]==0&&returnState) {
@@ -73,8 +74,7 @@ public class GameActivity extends AppCompatActivity {
                 }
             }
         }
-        //detect is game is won by calling Nathans method here
-        return returnState&&!gameWon;
+        return returnState&&!gameWon();
     }
     private boolean gameWon(){
         boolean returnState = false;
