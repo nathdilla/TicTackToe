@@ -14,18 +14,21 @@
         android:textSize="30sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/eagleRed"/>
+        android:textColor="@color/eagleRed"
+        android:fontFamily="@font/colleges"/>
 
     <Button
         android:id="@+id/infoButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="How to Play" />
+        android:text="How to Play"
+        android:fontFamily="@font/colleges"/>
 
     <Button
         android:id="@+id/gameButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start Game" />
+        android:text="Start Game"
+        android:fontFamily="@font/colleges"/>
 
 </LinearLayout>
