@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import java.io.Console;
 import java.util.stream.IntStream;
@@ -23,6 +24,7 @@ public class GameActivity extends AppCompatActivity {
     boolean xOrO = false;// if the active player is x or O
     //true - O
     //false - x
+    private int[] score = new int[2];
     private Button[][] gameButtons = new Button[3][3];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,11 +45,25 @@ public class GameActivity extends AppCompatActivity {
                         }else{
                             buttonStates[finalI][finalJ] = 2;
                         }
-                        xOrO=!xOrO;
-                        gameButtons[finalI][finalJ].setText(!xOrO+"");
+                        gameButtons[finalI][finalJ].setText(xOrO+"");
                         gameButtons[finalI][finalJ].setEnabled(false);
-                        gameWon();
-                        isCatsGame();
+                        xOrO=!xOrO;
+                        if(gameWon()){
+                           if(xOrO){
+                               //
+                               score[0]++;
+                               TextView tv1 = findViewById(R.id.p1Text);
+                               tv1.setText("Player 1: "+score[0]);
+                           }else{
+                               score[1]++;
+                               TextView tv1 = findViewById(R.id.p2Text);
+                               tv1.setText("Player 2: "+score[1]);
+                           }
+                            resetBoard();
+                        }
+                        if (isCatsGame()){
+                            resetBoard();
+                        }
                     }
                 });
 
@@ -100,5 +116,17 @@ public class GameActivity extends AppCompatActivity {
             returnState = true;
         }
         return returnState;
+    }
+    private void resetBoard(){
+        for (int i = 0; i <3;i++){
+            for (int j = 0; j<3;j++){
+                int id = getResources().getIdentifier("button"+i+""+j,"id",getPackageName());
+                Button b = findViewById(id);
+                b.setEnabled(true);
+                b.setText("");
+                buttonStates[i][j]=0;
+                xOrO = false;
+            }
+        }
     }
 }
