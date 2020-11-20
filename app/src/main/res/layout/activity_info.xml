@@ -6,25 +6,31 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="@color/background"
     tools:context=".InfoActivity">
 
     <TextView
         android:text="How to play"
         android:textSize="30sp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:textColor="@color/eagleRed"
+        android:fontFamily="@font/colleges"/>
 
     <TextView
         android:text="The game is played on a grid that's 3 squares by 3 squares. You are X, your friend (or the computer) is O. Players take turns putting their marks in empty squares. The first player to get 3 of there marks in a row (up, down, across, or diagonally) is the winner. When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie."
         android:textSize="30sp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:textColor="@color/eagleRed"
+        android:fontFamily="@font/colleges"/>
 
 
     <Button
         android:id="@+id/homeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Back" />
+        android:text="Back"
+        android:fontFamily="@font/colleges"/>
 
 </LinearLayout>

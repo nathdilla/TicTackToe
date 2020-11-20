@@ -42,10 +42,12 @@ public class GameActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         if (!xOrO){
                             buttonStates[finalI][finalJ] = 1;
+                            v.setForeground(getDrawable(R.drawable.eagle));
                         }else{
                             buttonStates[finalI][finalJ] = 2;
+                            v.setForeground(getDrawable(R.drawable.rioux));
                         }
-                        gameButtons[finalI][finalJ].setText(xOrO+"");
+                        //gameButtons[finalI][finalJ].setText(xOrO+"");
                         gameButtons[finalI][finalJ].setEnabled(false);
                         xOrO=!xOrO;
                         if(gameWon()){
@@ -125,6 +127,7 @@ public class GameActivity extends AppCompatActivity {
                 b.setEnabled(true);
                 b.setText("");
                 buttonStates[i][j]=0;
+                gameButtons[i][j].setForeground(null);
                 xOrO = false;
             }
         }
