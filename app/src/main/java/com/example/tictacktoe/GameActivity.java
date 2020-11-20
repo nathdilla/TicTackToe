@@ -65,18 +65,18 @@ public class GameActivity extends AppCompatActivity {
                                score[0]++;
                                TextView tv1 = findViewById(R.id.p1Text);
                                tv1.setText("Player 1: "+score[0]);
-                               Toast.makeText(getApplicationContext(),"Player 1 wins",Toast.LENGTH_LONG);
+                               Toast.makeText(getApplicationContext(),"Player 1 wins",Toast.LENGTH_LONG).show();
                            }else{
                                score[1]++;
                                TextView tv1 = findViewById(R.id.p2Text);
                                tv1.setText("Player 2: "+score[1]);
-                               Toast.makeText(getApplicationContext(),"Player 2 wins",Toast.LENGTH_LONG);
+                               Toast.makeText(getApplicationContext(),"Player 2 wins",Toast.LENGTH_LONG).show();
                            }
                             resetBoard();
                         }
                         if (isCatsGame()){
                             resetBoard();
-                            Toast.makeText(getApplicationContext(),"No one wins",Toast.LENGTH_LONG);
+                            Toast.makeText(getApplicationContext(),"No one wins",Toast.LENGTH_LONG).show();
                         }
                     }
                 });
