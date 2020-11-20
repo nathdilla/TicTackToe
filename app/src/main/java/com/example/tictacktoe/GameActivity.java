@@ -1,12 +1,15 @@
 package com.example.tictacktoe;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.io.Console;
@@ -26,6 +29,7 @@ public class GameActivity extends AppCompatActivity {
     //false - x
     private int[] score = new int[2];
     private Button[][] gameButtons = new Button[3][3];
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +42,7 @@ public class GameActivity extends AppCompatActivity {
                 final int finalI = i;
                 final int finalJ = j;
                 gameButtons[i][j].setOnClickListener(new View.OnClickListener() {
+                    @RequiresApi(api = Build.VERSION_CODES.M)
                     @Override
                     public void onClick(View v) {
                         if (!xOrO){
@@ -52,7 +57,6 @@ public class GameActivity extends AppCompatActivity {
                         xOrO=!xOrO;
                         if(gameWon()){
                            if(xOrO){
-                               //
                                score[0]++;
                                TextView tv1 = findViewById(R.id.p1Text);
                                tv1.setText("Player 1: "+score[0]);
@@ -119,6 +123,7 @@ public class GameActivity extends AppCompatActivity {
         }
         return returnState;
     }
+    @RequiresApi(api = Build.VERSION_CODES.M)
     private void resetBoard(){
         for (int i = 0; i <3;i++){
             for (int j = 0; j<3;j++){

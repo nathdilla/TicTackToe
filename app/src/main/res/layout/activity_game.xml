@@ -21,31 +21,20 @@
             android:id="@+id/p1Text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/colleges"
             android:text="Player 1: 0"
-            android:textSize="30sp"
             android:textColor="@color/white"
-            android:fontFamily="@font/colleges"/>
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/p2Text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/p1Text"
+            android:fontFamily="@font/colleges"
             android:text="Player 2: 0"
-            android:textSize="30sp"
             android:textColor="@color/white"
-            android:fontFamily="@font/colleges"/>
-
-        <Button
-            android:id="@+id/resetButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="33dp"
-            android:background="#FFFFFF"
-            android:text="Reset Score"
-            android:fontFamily="@font/colleges"/>
+            android:textSize="30sp" />
 
         <Button
             android:id="@+id/doneButton"
@@ -54,8 +43,16 @@
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:layout_marginEnd="150dp"
-            android:text="Back"
-            android:fontFamily="@font/colleges"/>
+            android:fontFamily="@font/colleges"
+            android:text="Back" />
+
+        <ImageView
+            android:id="@+id/playerState"
+            android:layout_width="115dp"
+            android:layout_height="74dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="0dp"/>
 
 
     </RelativeLayout>
