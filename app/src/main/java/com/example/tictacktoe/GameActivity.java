@@ -34,6 +34,7 @@ public class GameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+        final ImageView view = findViewById(R.id.playerState);
         for (int i = 0;i<3;i++){
             for(int j = 0; j<3;j++){
                 //String id = "button"+i+j;
@@ -48,9 +49,12 @@ public class GameActivity extends AppCompatActivity {
                         if (!xOrO){
                             buttonStates[finalI][finalJ] = 1;
                             v.setForeground(getDrawable(R.drawable.eagle));
+                            view.setForeground(getDrawable(R.drawable.eagle));
+
                         }else{
                             buttonStates[finalI][finalJ] = 2;
                             v.setForeground(getDrawable(R.drawable.rioux));
+                            view.setForeground(getDrawable(R.drawable.eagle));
                         }
                         //gameButtons[finalI][finalJ].setText(xOrO+"");
                         gameButtons[finalI][finalJ].setEnabled(false);
